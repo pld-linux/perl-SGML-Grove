@@ -9,7 +9,7 @@ Version:	2.03
 Release:	9
 License:	distributable
 Group:		Development/Languages/Perl
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 Patch0:		%{name}-Simple-Spec.patch
 BuildRequires:	perl-devel >= 5.6.1
 BuildArch:	noarch
