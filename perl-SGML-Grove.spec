@@ -1,10 +1,13 @@
+%define	pdir	SGML
+%define	pnam	Grove
 %define		_noautoreq "perl(SGML::SubDocEntity)"
 %include	/usr/lib/rpm/macros.perl
 Summary:	SGML-Grove perl module
 Summary(pl):	Modu³ perla SGML-Grove
 Name:		perl-SGML-Grove
 Version:	2.03
-Release:	7
+Release:	8
+
 License:	distributable
 Group:		Development/Languages/Perl
 Group(cs):	Vývojové prostøedky/Programovací jazyky/Perl
@@ -21,7 +24,7 @@ Group(pt):	Desenvolvimento/Linguagens/Perl
 Group(ru):	òÁÚÒÁÂÏÔËÁ/ñÚÙËÉ/Perl
 Group(sl):	Razvoj/Jeziki/Perl
 Group(sv):	Utveckling/Språk/Perl
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/SGML/SGML-Grove-%{version}.tar.gz
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 Patch0:		%{name}-Simple-Spec.patch
 BuildRequires:	perl-devel >= 5.6.1
 BuildArch:	noarch
