@@ -47,7 +47,7 @@ SGML::Grove umo¿liwia operowanie na dokumentach SGML, XML, HTML.
 
 %build
 %{__perl} Makefile.PL \
-	INSTALLDIRS=vendor 
+	INSTALLDIRS=vendor
 %{__make}
 
 %install
