@@ -24,6 +24,7 @@ Release:	11
 License:	BSD-like
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	9764eaed3da0b4134224afe9b63a8966
 Patch0:		%{name}-Simple-Spec.patch
 BuildRequires:	perl-devel >= 5.6.1
 BuildArch:	noarch
