@@ -11,7 +11,7 @@ Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/SGML/SGML-Grove-%{version
 BuildRequires:	perl >= 5.005_03-10
 %requires_eq	perl
 Requires:	%{perl_sitearch}
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 SGML-Grove provides an interface for accessing and manipulating SGML, XML,
