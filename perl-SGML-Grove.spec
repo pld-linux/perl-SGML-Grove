@@ -2,8 +2,8 @@
 %define	pdir	SGML
 %define	pnam	Grove
 %define		_noautoreq "perl(SGML::SubDocEntity)"
-Summary:	SGML-Grove perl module
-Summary(pl):	Modu³ perla SGML-Grove
+Summary:	SGML::Grove perl module
+Summary(pl):	Modu³ perla SGML::Grove
 Name:		perl-SGML-Grove
 Version:	2.03
 Release:	9
@@ -16,13 +16,13 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-SGML-Grove provides an interface for accessing and manipulating SGML,
+SGML::Grove provides an interface for accessing and manipulating SGML,
 XML, HTML and other document instances after they've been built by a
 parsing or grove building module like SGML::SPGroveBuilder,
 Pod::GroveBuilder, etc.
 
 %description -l pl
-SGML-Grove umo¿liwia operowanie na dokumentach SGML, XML, HTML.
+SGML::Grove umo¿liwia operowanie na dokumentach SGML, XML, HTML.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
