@@ -1,0 +1,11 @@
+--- SGML-Grove-2.03/Simple/Spec.pm~	Sun Jan 18 01:21:22 1998
++++ SGML-Grove-2.03/Simple/Spec.pm	Sun Apr 29 22:06:13 2001
+@@ -5,6 +5,8 @@
+ # $Id$
+ #
+ 
++package SGML::Simple::Spec;
++
+ =head1 NAME
+ 
+ SGML::Simple::Spec - a simple transformation specification
