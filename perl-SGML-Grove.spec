@@ -1,4 +1,4 @@
-%define		perl_sitelib	%(eval "`perl -V:installsitelib`"; echo $installsitelib)
+%include	/usr/lib/rpm/macros.perl
 Summary:	SGML-Grove perl module
 Summary(pl):	Modu³ perla SGML-Grove
 Name:		perl-SGML-Grove
