@@ -1,3 +1,7 @@
+#
+# Conditional build:
+%bcond_without	tests	# do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	SGML
 %define		pnam	Grove
@@ -26,7 +30,11 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	9764eaed3da0b4134224afe9b63a8966
 Patch0:		%{name}-Simple-Spec.patch
+%if %{with tests}
+BuildRequires:	perl-Class-Visitor
+%endif
 BuildRequires:	perl-devel >= 5.6.1
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -50,13 +58,14 @@ SGML::Grove umo¿liwia operowanie na dokumentach SGML, XML, HTML.
 	INSTALLDIRS=vendor
 %{__make}
 
+%{?with_tests:%{__make} test}
+
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
-
 install examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 cp -a entities $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
