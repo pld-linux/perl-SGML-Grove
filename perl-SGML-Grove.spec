@@ -10,7 +10,7 @@ Summary(fr):	Module Perl SGML::Grove
 Summary(it):	Modulo di Perl SGML::Grove
 Summary(ja):	SGML::Grove Perl ¥â¥¸¥å¡¼¥ë
 Summary(ko):	SGML::Grove ÆÞ ¸ðÁÙ
-Summary(no):	Perlmodul SGML::Grove
+Summary(nb):	Perlmodul SGML::Grove
 Summary(pl):	Modu³ Perla SGML::Grove
 Summary(pt):	Módulo de Perl SGML::Grove
 Summary(pt_BR):	Módulo Perl SGML::Grove
