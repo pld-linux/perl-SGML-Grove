@@ -3,9 +3,10 @@ Summary:	SGML-Grove perl module
 Summary(pl):	Modu³ perla SGML-Grove
 Name:		perl-SGML-Grove
 Version:	2.03
-Release:	3
-Copyright:	distributable
+Release:	4
+License:	Distributable
 Group:		Development/Languages/Perl
+Group(de):	Entwicklung/Sprachen/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/SGML/SGML-Grove-%{version}.tar.gz
 BuildRequires:	perl >= 5.005_03-10
@@ -31,33 +32,22 @@ perl Makefile.PL
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_prefix}/src/examples/%{name}-%{version}
+install -d $RPM_BUILD_ROOT%{_exampledir}/%{name}-%{version}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-install examples/* $RPM_BUILD_ROOT%{_prefix}/src/examples/%{name}-%{version}
-cp -a entities $RPM_BUILD_ROOT%{_prefix}/src/examples/%{name}-%{version}
+install examples/* $RPM_BUILD_ROOT%{_exampledir}/%{name}-%{version}
+cp -a entities $RPM_BUILD_ROOT%{_exampledir}/%{name}-%{version}
 
-(
-  cd $RPM_BUILD_ROOT%{perl_sitearch}/auto/SGML/Grove
-  sed -e "s#$RPM_BUILD_ROOT##" .packlist >.packlist.new
-  mv .packlist.new .packlist
-)
-
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man3/* \
-        Changes ChangeLog README ToDo DOM 
+gzip -9nf Changes ChangeLog README ToDo DOM 
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {Changes,ChangeLog,README,ToDo,DOM}.gz
-
+%doc *.gz
 %{perl_sitelib}/SGML/*.pm
 %{perl_sitelib}/SGML/Simple
-%{perl_sitearch}/auto/SGML/Grove
-
 %{_mandir}/man3/*
-
-%{_prefix}/src/examples/%{name}-%{version}
+%{_exampledir}/%{name}-%{version}
