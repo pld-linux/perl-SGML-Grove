@@ -20,7 +20,7 @@ Summary(uk):	Модуль для Perl SGML::Grove
 Summary(zh_CN):	SGML::Grove Perl дё©И
 Name:		perl-SGML-Grove
 Version:	2.03
-Release:	10
+Release:	11
 License:	BSD-like
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
