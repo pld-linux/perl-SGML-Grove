@@ -27,7 +27,7 @@ SGML-Grove umo¿liwia operowanie na dokumentach SGML, XML, HTML.
 
 %build
 perl Makefile.PL
-make
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
