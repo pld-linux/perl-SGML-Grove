@@ -20,7 +20,7 @@ Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl SGML::Grove
 Summary(zh_CN):	SGML::Grove Perl Ä£¿é
 Name:		perl-SGML-Grove
 Version:	2.03
-Release:	10
+Release:	11
 License:	BSD-like
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -45,7 +45,8 @@ SGML::Grove umo¿liwia operowanie na dokumentach SGML, XML, HTML.
 %patch0 -p1
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make}
 
 %install
@@ -63,6 +64,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc COPYING Changes ChangeLog README ToDo DOM
-%{perl_sitelib}/SGML
+%{perl_vendorlib}/SGML
 %{_mandir}/man3/*
 %{_examplesdir}/%{name}-%{version}
