@@ -1,3 +1,4 @@
+%define		_noautoreq "perl(SGML::SubDocEntity)"
 %include	/usr/lib/rpm/macros.perl
 Summary:	SGML-Grove perl module
 Summary(pl):	Modu³ perla SGML-Grove
@@ -9,6 +10,7 @@ Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/SGML/SGML-Grove-%{version}.tar.gz
+Patch0:		perl-SGML-Grove-Simple-Spec.patch
 BuildRequires:	perl >= 5.005_03-10
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -23,6 +25,7 @@ SGML-Grove umo¿liwia operowanie na dokumentach SGML, XML, HTML.
 
 %prep
 %setup -q -n SGML-Grove-%{version}
+%patch0 -p1
 
 %build
 perl Makefile.PL
