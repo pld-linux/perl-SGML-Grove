@@ -5,7 +5,7 @@ Summary(pl):	Modu³ perla SGML-Grove
 Name:		perl-SGML-Grove
 Version:	2.03
 Release:	5
-License:	Distributable
+License:	distributable
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
