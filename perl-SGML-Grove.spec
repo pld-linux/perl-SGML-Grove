@@ -32,12 +32,12 @@ perl Makefile.PL
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_exampledir}/%{name}-%{version}
+install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-install examples/* $RPM_BUILD_ROOT%{_exampledir}/%{name}-%{version}
-cp -a entities $RPM_BUILD_ROOT%{_exampledir}/%{name}-%{version}
+install examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+cp -a entities $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 gzip -9nf Changes ChangeLog README ToDo DOM 
 
@@ -50,4 +50,4 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_sitelib}/SGML/*.pm
 %{perl_sitelib}/SGML/Simple
 %{_mandir}/man3/*
-%{_exampledir}/%{name}-%{version}
+%{_examplesdir}/%{name}-%{version}
