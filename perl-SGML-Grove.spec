@@ -30,7 +30,7 @@ BuildRequires:	perl-devel >= 5.6.1
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_noautoreq "perl(SGML::SubDocEntity)"
+%define		_noautoreq 'perl(SGML::SubDocEntity)'
 
 %description
 SGML::Grove provides an interface for accessing and manipulating SGML,
@@ -54,7 +54,8 @@ SGML::Grove umo¿liwia operowanie na dokumentach SGML, XML, HTML.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 install examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 cp -a entities $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
