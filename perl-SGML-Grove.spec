@@ -45,7 +45,7 @@ SGML::Grove umo¿liwia operowanie na dokumentach SGML, XML, HTML.
 %patch0 -p1
 
 %build
-perl Makefile.PL
+%{__perl} Makefile.PL
 %{__make}
 
 %install
