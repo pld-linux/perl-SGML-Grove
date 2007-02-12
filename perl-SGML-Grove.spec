@@ -6,22 +6,22 @@
 %define		pdir	SGML
 %define		pnam	Grove
 Summary:	SGML::Grove Perl module
-Summary(cs):	Modul SGML::Grove pro Perl
-Summary(da):	Perlmodul SGML::Grove
-Summary(de):	SGML::Grove Perl Modul
-Summary(es):	MÛdulo de Perl SGML::Grove
-Summary(fr):	Module Perl SGML::Grove
-Summary(it):	Modulo di Perl SGML::Grove
-Summary(ja):	SGML::Grove Perl •‚•∏•Â°º•Î
-Summary(ko):	SGML::Grove ∆ﬁ ∏¡Ÿ
-Summary(nb):	Perlmodul SGML::Grove
-Summary(pl):	Modu≥ Perla SGML::Grove
-Summary(pt):	MÛdulo de Perl SGML::Grove
-Summary(pt_BR):	MÛdulo Perl SGML::Grove
-Summary(ru):	Ìœƒ’Ãÿ ƒÃ— Perl SGML::Grove
-Summary(sv):	SGML::Grove Perlmodul
-Summary(uk):	Ìœƒ’Ãÿ ƒÃ— Perl SGML::Grove
-Summary(zh_CN):	SGML::Grove Perl ƒ£øÈ
+Summary(cs.UTF-8):   Modul SGML::Grove pro Perl
+Summary(da.UTF-8):   Perlmodul SGML::Grove
+Summary(de.UTF-8):   SGML::Grove Perl Modul
+Summary(es.UTF-8):   M√≥dulo de Perl SGML::Grove
+Summary(fr.UTF-8):   Module Perl SGML::Grove
+Summary(it.UTF-8):   Modulo di Perl SGML::Grove
+Summary(ja.UTF-8):   SGML::Grove Perl „É¢„Ç∏„É•„Éº„É´
+Summary(ko.UTF-8):   SGML::Grove ÌéÑ Î™®Ï§Ñ
+Summary(nb.UTF-8):   Perlmodul SGML::Grove
+Summary(pl.UTF-8):   Modu≈Ç Perla SGML::Grove
+Summary(pt.UTF-8):   M√≥dulo de Perl SGML::Grove
+Summary(pt_BR.UTF-8):   M√≥dulo Perl SGML::Grove
+Summary(ru.UTF-8):   –ú–æ–¥—É–ª—å –¥–ª—è Perl SGML::Grove
+Summary(sv.UTF-8):   SGML::Grove Perlmodul
+Summary(uk.UTF-8):   –ú–æ–¥—É–ª—å –¥–ª—è Perl SGML::Grove
+Summary(zh_CN.UTF-8):   SGML::Grove Perl Ê®°Âùó
 Name:		perl-SGML-Grove
 Version:	2.03
 Release:	12
@@ -46,8 +46,8 @@ XML, HTML and other document instances after they've been built by a
 parsing or grove building module like SGML::SPGroveBuilder,
 Pod::GroveBuilder, etc.
 
-%description -l pl
-SGML::Grove umoøliwia operowanie na dokumentach SGML, XML, HTML.
+%description -l pl.UTF-8
+SGML::Grove umo≈ºliwia operowanie na dokumentach SGML, XML, HTML.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
