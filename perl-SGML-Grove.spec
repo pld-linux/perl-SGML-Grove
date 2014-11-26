@@ -1,10 +1,10 @@
 #
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
-#
-%include	/usr/lib/rpm/macros.perl
+
 %define		pdir	SGML
 %define		pnam	Grove
+%include	/usr/lib/rpm/macros.perl
 Summary:	SGML::Grove Perl module
 Summary(cs.UTF-8):	Modul SGML::Grove pro Perl
 Summary(da.UTF-8):	Perlmodul SGML::Grove
@@ -30,11 +30,12 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	9764eaed3da0b4134224afe9b63a8966
 Patch0:		%{name}-Simple-Spec.patch
+URL:		http://search.cpan.org/dist/SGML-Grove/
+BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 BuildRequires:	perl-Class-Visitor
 %endif
-BuildRequires:	perl-devel >= 1:5.8.0
-BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -66,7 +67,7 @@ install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
-install examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+cp -p examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 cp -a entities $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
