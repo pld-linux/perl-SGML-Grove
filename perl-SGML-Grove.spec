@@ -4,7 +4,6 @@
 
 %define		pdir	SGML
 %define		pnam	Grove
-%include	/usr/lib/rpm/macros.perl
 Summary:	SGML::Grove Perl module
 Summary(cs.UTF-8):	Modul SGML::Grove pro Perl
 Summary(da.UTF-8):	Perlmodul SGML::Grove
